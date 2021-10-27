@@ -1,11 +1,80 @@
+/* ---General Styles--- */
+
 * {
     box-sizing: border-box;
     font-family: 'Merriweather', serif;
 }
 
-body, h1 {
+body {
     margin: 0;
 }
+
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+    letter-spacing: .02em;
+    color: rgba(255,255,255, 80%);
+}
+
+h2 {
+    font-weight: 600;
+}
+
+/* ---Body Styles--- */
+
+header {
+    padding: 1.6em 0;
+    background-color: rgba(0, 17, 51, .90);
+}
+
+main {
+    margin: 4px 5% 0;
+    padding-top: 2em;
+    border-top: 2px solid rgba(0, 17, 51, .90);
+}
+
+footer {
+    font-style: italic;
+}
+
+/* ---Form Styles--- */
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+textarea {
+    margin: 1em 0;
+    width: 100%;
+}
+
+label {
+    margin-bottom: .7em;
+    color: rgba(0, 26, 77, .6);
+}
+
+select {
+    color: rgba(0,0,0, 60%);
+}
+
+legend {
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+button {
+    margin: .8em 0;
+    padding: 1.2em 0;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(46, 184, 184, .9);
+}
+
+/* ---Flex Styles--- */
 
 .flex {
     display: flex;
@@ -16,26 +85,7 @@ body, h1 {
     display: flex;
 }
 
-fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-header {
-    padding: 1.6em 0;
-    background-color: rgba(0, 17, 51, .90);
-}
-
-h1 {
-    color: rgba(255,255,255, 80%);
-    font-size: 1.5em;
-    letter-spacing: .02em;
-}
-
-h2 {
-    font-weight: 600;
-}
+/* ---Misc. Styles--- */
 
 .intro h2, legend {
     font-size: 1.5em;
@@ -46,7 +96,7 @@ h1, .intro, footer {
     text-align: center;
 }
 
-.intro, main {
+.intro {
     margin: 0 5%;
 }
 
@@ -61,28 +111,12 @@ h1, .intro, footer {
     border-bottom: 4px solid rgba(0, 17, 51, .90);
 }
 
-main {
-    margin-top: 4px;
-    padding-top: 2em;
-    border-top: 2px solid rgba(0, 17, 51, .90);
-}
-
 input, select, textarea {
     border: none;
     padding: 1.5em 0;
     border-radius: 3px;
     background-color: rgba(0,0,0, 8%);
     outline-color: rgba(0, 17, 51, .60);
-}
-
-textarea {
-    margin: 1em 0;
-    width: 100%;
-}
-
-label {
-    margin-bottom: .7em;
-    color: rgba(0, 26, 77, .6);
 }
 
 form fieldset:first-child input:nth-of-type(n+3), select {
@@ -93,39 +127,69 @@ form fieldset:last-child label {
     margin-bottom: 1em;
 }
 
-
-
 hr {
     margin: 1em 0;
     border: 1px solid rgba(0, 17, 51, .90);
 }
-
-select {
-    color: rgba(0,0,0, 60%);
-}
-
-legend {
-    margin-bottom: 1em;
-    font-weight: 600;
-}
-
-
 
 .required {
     align-self: flex-end;
     color: rgba(0,0,0, 50%);
 }
 
-button {
-    margin: .8em 0;
-    padding: 1.2em 0;
-    font-size: 1.5em;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background-color: rgba(46, 184, 184, .9);
+
+/* ///Media Queries/// */
+
+@media screen and (min-width: 768px) {
+     fieldset:first-child .flex {
+        flex-direction: row;
+        align-items: center;
+    }
+
+     Fieldset:first-child input, select {
+        flex: 2;
+        margin-bottom: 1em;
+     }
+
+     Fieldset:first-child label {
+        flex: 1;
+     }
+
+
+
+     .required {
+         display: none;
+     }
+
+     fieldset:first-child .flex:nth-of-type(-n+2) label:after {
+        content: '*required';
+        margin-left: 1em;
+        color: rgba(0,0,0, 50%);
+     }
+
+     #zip {
+         width: 25%;
+     }
+
+     hr {
+         margin: 2em 0;
+     }
+
+     fieldset:last-child .flex > label,
+     fieldset:last-child .flex:nth-of-type(3),
+     fieldset:last-child .flex:nth-of-type(5) {
+         margin-bottom: 1.5em;
+     }
 }
 
-footer {
-    font-style: italic;
-}
+
+
+
+
+
+
+
+
+
+
+
