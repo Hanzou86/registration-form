@@ -33,6 +33,10 @@ h1 {
     letter-spacing: .02em;
 }
 
+h2 {
+    font-weight: 600;
+}
+
 .intro h2, legend {
     font-size: 1.5em;
     color: rgba(0, 17, 51, .90);
@@ -102,6 +106,7 @@ select {
 
 legend {
     margin-bottom: 1em;
+    font-weight: 600;
 }
 
 
@@ -121,3 +126,6 @@ button {
     background-color: rgba(46, 184, 184, .9);
 }
 
+footer {
+    font-style: italic;
+}
