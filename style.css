@@ -74,7 +74,7 @@ button {
     border: none;
     border-radius: 5px;
     color: white;
-    background-color: rgba(46, 184, 184, .9);
+    background-color: hsl(180, 100%, 32%);
 }
 
 #zip {
@@ -126,7 +126,7 @@ h1, .intro, footer {
 
 .intro p, footer {
     font-size: 1.1em;
-    color: rgba(0,0,0, .35);
+    color: hsl(0, 0%, 45%);
 }
 
 .intro {
